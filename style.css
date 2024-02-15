@@ -6,99 +6,38 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
   font-size: 16px;
-  height: 100dvh;
   font-family: "Space Grotesk", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
-.container {
+.page {
   width: 100%;
-  z-index: 1;
-  min-height: 100%;
-  margin: auto;
-  padding: 1rem;
-  background-color: white;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.container:has(option[value="red"]:checked) {
-  background-color: rgb(255, 177, 177);
-
-  .content {
-    background: linear-gradient(to bottom, #583056 10%, #984e4e 100%);
-  }
-}
-.container:has(option[value="blue"]:checked) {
-  background-color: rgb(53, 70, 93);
-  color: #fff;
-
-  .content {
-    background: linear-gradient(to bottom, #296eab 10%, #444983 100%);
-  }
-}
-.container:has(option[value="green"]:checked) {
-  background-color: rgb(79, 176, 132);
-  color: white;
-
-  .content {
-    background: linear-gradient(to bottom, #4b8e8e 10%, #4e834e 100%);
-  }
-}
-.container:has(option[value="black"]:checked) {
-  background-color: rgb(33, 34, 33);
-  color: white;
-
-  .content {
-    background: linear-gradient(to bottom, #212d2d 10%, #4a4b4a 100%);
-  }
-}
-
-fieldset {
-  border: 1px solid #ddd;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 5px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-fieldset div {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
 }
 
-fieldset div select {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-fieldset div select:focus {
-  outline: none;
-}
-
-.content {
-  padding: 1rem;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.page:first-child {
+  background: linear-gradient(90deg, #614385, #516395);
   color: white;
-  text-align: center;
-  align-items: center;
+
+  a {
+    color: white;
+  }
+}
+.page:nth-child(2) {
+  background: linear-gradient(90deg, #ee9ca7, #ffdde1);
+}
+.page:nth-child(3) {
+  background: linear-gradient(90deg, #f9c8a7, #fda085);
 }
